@@ -1,4 +1,15 @@
+172.31.31.128
 
 [webservers]
 172.31.31.128
 172.31.12.98
+
+[redhatservers]
+172.31.12.98
+
+[ubuntuservers]
+172.31.31.128
+
+[webservers:vars]
+mywebserveronubuntu=apache2
+mywebserveronredhat=httpd
