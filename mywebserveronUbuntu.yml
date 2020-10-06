@@ -8,10 +8,10 @@
       name: apache2
       sate: present
 
-  - name: restart webserver
+  - name: start webserver
     service:
       name: apache2
-      state: restarted
+      state: started
 
   - name: i want copy file into ansible node side
     template:
