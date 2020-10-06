@@ -1,0 +1,23 @@
+---
+- hosts: 172.31.31.128 
+  become: yes
+  tasks:
+  - include_tasks: myfile.yml
+  - name: install webservers
+    apt:
+      name: apache2
+      sate: present
+
+  - name: restart webserver
+    service:
+      name: apache2
+      state: restarted
+
+  - name: i want copy file into ansible node side
+    template:
+      src: index.j2
+      dest: /var/www/html/index.html
+  - name: i want to restart my apache2 webserver
+    service:
+      name: apache2
+      state: restarted
