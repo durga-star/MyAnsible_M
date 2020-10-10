@@ -6,7 +6,7 @@
   - name: install webservers
     apt:
       name: apache2
-      sate: present
+      state: present
 
   - name: start webserver
     service:
